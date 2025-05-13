@@ -1,0 +1,19 @@
+<div class="container">
+  <h2>🧬 Mutante Checker</h2>
+  <textarea
+    placeholder="Introduce secuencia de ADN (una fila por línea, solo A, T, C, G)"
+    rows="8"
+    [ngModel]="dnaInput()"            
+    (ngModelChange)="setDnaInput($event)" 
+    class="dna-input"
+  ></textarea>
+  <button (click)="validate()">Check</button>
+
+  @if (result()) {
+    <div class="result">{{ result() }}</div>
+  }
+
+  @if (error()) {
+    <div class="error">{{ error() }}</div>
+  }
+</div>

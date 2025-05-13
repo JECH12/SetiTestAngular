@@ -1,0 +1,108 @@
+/* Estilos generales del contenedor */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f9;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+}
+
+/* Título */
+h2 {
+  color: #3b3b3b;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Área de texto */
+.dna-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  resize: none;
+  background-color: #fff;
+  transition: all 0.3s ease;
+
+  &:focus {
+    border-color: #4caf50;
+    outline: none;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+  }
+}
+
+/* Botón de validar */
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #45a049;
+  }
+}
+
+button:active {
+  background-color: #388e3c;
+}
+
+/* Resultados */
+.result, .error {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.result {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+.error {
+  background-color: #f2dede;
+  color: #a94442;
+}
+
+.dna-grid {
+  font-family: monospace;
+  display: inline-block;
+  padding: 10px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.dna-row {
+  line-height: 1.5;
+}
+
+.dna-row span {
+  display: inline-block;
+  width: 1.5ch;
+  text-align: center;
+  color: #ccc;
+}
+
+.dna-row span.highlight {
+  color: #00ff00; /* verde neón */
+  font-weight: bold;
+  text-shadow: 0 0 3px #00ff00;
+}
